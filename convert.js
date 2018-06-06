@@ -8,6 +8,6 @@ csvtojsonV2()
   .then((jsonObj)=>{
     const jsonFilePath = path.join(__dirname, 'customer-data.json');
     console.log(`Writing json file ${jsonFilePath}`);
-    fs.writeFileSync(jsonFilePath, JSON.stringify(jsonObj));
+    fs.writeFileSync(jsonFilePath, JSON.stringify(jsonObj, null, '\t'));
     console.log(`Completed writing ${jsonObj.length}`);
   });
